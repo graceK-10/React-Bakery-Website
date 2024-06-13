@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Link } from "react-router-dom";
 import { MdBakeryDining } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 import { RxEyeClosed } from "react-icons/rx";
@@ -17,16 +16,16 @@ const Navbar = () => {
         <nav className='container flex justify-between items-center  p-4 rounded-lg shadow-md'>
             <div className='flex items-center gap-2 text-3xl'>
                 <MdBakeryDining size={65} className='text-secondary' />
-                <a href="/logo" className="href ">Baked</a>
+                <a href="/logo" className="href ">Baked Bliss</a>
             </div>
-            <div className='hidden md:flex items-center gap-8 font-medium text-lg'>
-                <Link to="/" className='hover:text-secondary transition duration-200 ease-linear hover:border-b-2 hover:border-r-2 px-2 rounded-lg hover:border-secondary'>Home</Link>
-                <Link to="/about" className='hover:text-secondary transition duration-200 ease-linear hover:border-b-2 hover:border-r-2 px-2 rounded-lg hover:border-secondary'>About Us</Link>
-                <Link to="/menu" className='hover:text-secondary transition duration-200 ease-linear hover:border-b-2 hover:border-r-2 px-2 rounded-lg hover:border-secondary'>Baked Menu</Link>
-                <Link to="/cart" className='hidden md:flex border-2 border-secondary text-base px-3 py-0.5 rounded-2xl hover:bg-primary hover:text-white hover:border-primary transition duration-100 ease-linear'>Baked Cart</Link>
-            </div>
+            <div className='hidden md:flex items-center gap-8 font-medium text-xl'>
+          <a href="/" className='hover:border-b-2 hover:border-r-2 hover:text-fourthColor hover:border-b-secondary border-r-secondary px-3 rounded-lg'>Home</a>
+          <a href="/about" className='hover:border-b-2 hover:border-r-2 hover:text-fourthColor hover:border-b-secondary border-r-secondary px-3 rounded-lg'>About Us</a>
+          <a href="/menu" className='hover:border-b-2 hover:border-r-2 hover:text-fourthColor hover:border-b-secondary border-r-secondary px-3 rounded-lg'>Baked Menu</a>
+          <button className="px-4 py-2 bg-secondary border-fourthColor text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">Baked Cart</button>
+        </div>
             {/* navbar open and close responsive icon */}
-            <div className='md:hidden flex items-center'>
+            <div className='md:hidden pr-[5rem] sm:pr-[5rem] flex items-center'>
                 {menu ? (
                     <FaEye size={25} onClick={handleClick} />
                 ) : (
