@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .text-outline-tertiary {
+      text-shadow: 
+        -1px -1px 0 hsl(272, 100%, 50%),  
+        2px -1px 0 #3C1361,
+        -1px 1px 0 #610bac,
+        2px 1px 0 #3C1361;
+    }
+  }
