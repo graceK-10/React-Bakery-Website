@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <header className='fixed w-full z-10'>
-        <nav className='container flex justify-between items-center  p-4 rounded-lg shadow-md'>
+        <nav className='container bg-white flex justify-between items-center  p-4 rounded-lg shadow-md'>
             <div className='flex items-center gap-2 text-3xl'>
                 <MdBakeryDining size={65} className='text-secondary' />
                 <a href="/logo" className="href ">Baked Bliss</a>
