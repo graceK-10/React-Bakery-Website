@@ -50,7 +50,7 @@ body{
     align-items: center;
     min-height: 400px;
     top: 6rem;
-    background: #C3B1E1;
+    background: rgba(195, 177, 225, 0.5);
   }
 
   /* .swirl-bg {
