@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import '../index.css';
 
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -139,12 +140,9 @@ const HomePage = () => {
     </div>
   </div>
 </div>
-
-
-
-
     </div>
     </div>
+    <Footer />
   </>
   )
 }

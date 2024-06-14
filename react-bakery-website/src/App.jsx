@@ -5,6 +5,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Menu from './pages/Menu';
 import Cart from './pages/Cart';
+import Footer from './components/Footer';
 import './index.css';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/menu" element={<Menu />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/footer" element={<Footer />} />
     </Routes>
    </BrowserRouter>
    </>

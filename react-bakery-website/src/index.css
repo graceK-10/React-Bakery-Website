@@ -103,6 +103,7 @@ body{
 /* Home Page Menu Section */
 .container{
   background-color: rgba(128, 128, 128, 0.6);
+  margin-bottom: 2rem;
 }
 
 .icon-circle {
