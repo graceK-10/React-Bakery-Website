@@ -8,15 +8,15 @@ import { FaRegHeart } from "react-icons/fa6";
 import img from '../assets/hero-img.png';
 import img2 from '../assets/home-menu-img-1.png';
 import img3 from '../assets/home-menu-img-2.png';
+import img4 from '../assets/home-about-img-1.png';
 
 const HomePage = () => {
   return (
     <>
     <Navbar />
+    {/* Hero Section */}
     <div className="hero-section">
-      <div className="swirl-bg"></div>
-
-      {/* Hero Section */}
+      <div className="swirl-bg"></div>    
       <div className="content mx-[3rem] w-[37rem] text-center" >
         <h1 className="text-5xl font-bold text-white/80 mt-[3rem] mb-12 text-outline-tertiary text-shadow">Welcome to Baked Bliss!</h1>
         <p className="text-xl text-gray-900">
@@ -36,37 +36,60 @@ const HomePage = () => {
     </div>
 
     {/* Menu Section */}
-    <div className="menu-section mt-[15rem]">
-    <div className='w-[30rem] float-right  mr-[4rem]'>
-    <h3 className="text-xl font-bold text-black/90 mt-[3rem] mb-12 ">A wide range of baked goodies, for the sweet lovers</h3>
-    <p>Explore our extensive menu filled with mouthwatering treats and savory delights. Explore our extensive menu filled with mouthwatering treats and savory delights. Explore our extensive menu filled with mouthwatering treats and savory delights.</p>
+    <div className="menu-section mt-[8rem]">
+    <div className='w-[30rem] float-right  mr-[6rem]'>
+    <h3 className="text-xl font-bold text-white mt-[3rem] mb-12 ">A wide range of baked goodies, for the sweet lovers</h3>
+    <p className='text-white'>Explore our extensive menu filled with mouthwatering treats and savory delights. Explore our extensive menu filled with mouthwatering treats and savory delights. Explore our extensive menu filled with mouthwatering treats and savory delights.</p>
+    <button className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">Baked Menu</button>
     </div>
     
-    <div className='container mt-[12rem] bg-gray-200 w-[23rem] h-auto rounded-lg shadow-md'>
+    <div className='container mt-[12rem] bg-gray-200 w-[18rem] h-auto rounded-lg shadow-md'>
     <img src={img3} alt="Raspberry Rose Lychee Croissant" className='w-[12rem] h-auto rounded-full mx-auto' />
     <div className="p-4">
-      <h4 className="font-bold text-lg mb-2">Raspberry Croissant</h4>
-      <p className="text-gray-700 text-sm mb-4">Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.</p>
-      <MdOutlineShoppingCart size={30} />
-      <FaRegHeart size={27}/>
-      {/* <div className="flex justify-between items-center">
-          </div> */}
+      <h4 className="font-bold text-lg mb-2 text-white">Raspberry Croissant</h4>
+      <p className="text-white text-sm mb-4">Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.</p>
+      <div className="flex justify-around items-center">
+        <div className="icon-circle">
+          <MdOutlineShoppingCart size={30} />
+        </div>
+        <div className="icon-circle">
+          <FaRegHeart size={27} />
+        </div>
+      </div>
           </div>
     </div>
 
-    <div className='container mt-[-15rem] ml-[7rem] bg-gray-200 w-[23rem] h-auto rounded-lg overflow-hidden shadow-md'>
+    <div className='container mt-[-15rem] ml-[11rem] bg-gray-200 w-[18rem] h-auto rounded-lg overflow-hidden shadow-md'>
     <img src={img2} alt="Hero Image Stacked Donuts" className='w-[12rem] h-auto rounded-full mx-auto' />
     <div className="p-4">
-      <h4 className="font-bold text-lg mb-2">Nutella French Crepes</h4>
-      <p className="text-gray-700 text-sm mb-4">Delicately crafted with layers of thin crepes and filled with rich Nutella, its a delightful dessert you wll love to indulge in.</p>
-      <MdOutlineShoppingCart size={30} />
-      <FaRegHeart size={27}/>
-      {/* <div className="flex justify-between items-center">
-          </div> */}
-          </div>
+      <h4 className="font-bold text-lg mb-2 text-white">Nutella French Crepes</h4>
+      <p className="text-white text-sm mb-4">Delicately crafted with layers of thin crepes and filled with rich Nutella, its a delightful dessert you wll love to indulge in.</p>
+      
+      <div className="flex justify-around items-center">
+        <div className="icon-circle">
+          <MdOutlineShoppingCart size={30} />
+        </div>
+        <div className="icon-circle">
+          <FaRegHeart size={27} />
+        </div>
+      </div>
+      </div>
     </div>
+  </div>
+
+      {/* About Section */}
+  <div className="about-section">
+    <div className='text-container'>
+      <h3 className="text-xl font-bold text-white mb-12 ">Learn more about our tight-knit family bakery</h3>
+      <p className='text-white'>We are a family-owned bakery dedicated to bringing you the finest baked goods made from the highest quality ingredients. Our passion for baking is rooted in tradition, and we take pride in creating delicious treats that bring joy to our customers.</p>
+      <p className='text-white mt-8'>From baking biscuits on a street corner to owning a local bakery, our story is born from immigrant parents who instilled in us a love for baking and a commitment to excellence. Every recipe we create reflects our heritage and the values we hold dear.</p>
+      <button className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">About Us</button>
+    </div>  
+    <div className='image-container'>
+      <img src={img4} alt="Hero Image Stacked Donuts" className='about-image mt-[-10rem] ml-[8rem]'/>
     </div>
-    </>
+  </div>
+  </>
   )
 }
 

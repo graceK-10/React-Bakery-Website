@@ -14,14 +14,14 @@ const Navbar = () => {
   return (
     <header className='fixed w-full z-10'>
         <nav className='container bg-white flex justify-between items-center  p-4 rounded-lg shadow-md'>
-            <div className='flex items-center gap-2 text-3xl'>
+            <div className='flex items-center gap-2 text-3xl text-white'>
                 <MdBakeryDining size={65} className='text-secondary' />
                 <a href="/logo" className="href ">Baked Bliss</a>
             </div>
-            <div className='hidden md:flex items-center gap-8 font-medium text-xl'>
-          <a href="/" className='hover:border-b-2 hover:border-r-2 hover:text-fourthColor hover:border-b-secondary border-r-secondary px-3 rounded-lg'>Home</a>
-          <a href="/about" className='hover:border-b-2 hover:border-r-2 hover:text-fourthColor hover:border-b-secondary border-r-secondary px-3 rounded-lg'>About Us</a>
-          <a href="/menu" className='hover:border-b-2 hover:border-r-2 hover:text-fourthColor hover:border-b-secondary border-r-secondary px-3 rounded-lg'>Baked Menu</a>
+            <div className='hidden md:flex items-center gap-8 font-medium text-xl text-white'>
+          <a href="/" className=' hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full'>Home</a>
+          <a href="/about" className='hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full'>About Us</a>
+          <a href="/menu" className='hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full'>Baked Menu</a>
           <button className="px-4 py-2 bg-secondary border-fourthColor text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">Baked Cart</button>
         </div>
             {/* navbar open and close responsive icon */}

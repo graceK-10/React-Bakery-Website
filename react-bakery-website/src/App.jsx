@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Menu from './pages/Menu';
 import Cart from './pages/Cart';
+import './index.css';
 
 const App = () => {
   return (
