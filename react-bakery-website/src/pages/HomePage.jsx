@@ -4,6 +4,9 @@ import '../index.css';
 
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa6";
+import { IoStorefrontSharp } from "react-icons/io5";
+import { TbTruckDelivery } from "react-icons/tb";
+import { FaHandHoldingUsd } from "react-icons/fa";
 
 import img from '../assets/hero-img.png';
 import img2 from '../assets/home-menu-img-1.png';
@@ -50,7 +53,7 @@ const HomePage = () => {
       <p className="text-white text-sm mb-4">Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.</p>
       <div className="flex justify-around items-center">
         <div className="icon-circle">
-          <MdOutlineShoppingCart size={30} />
+          <MdOutlineShoppingCart size={29} />
         </div>
         <div className="icon-circle">
           <FaRegHeart size={27} />
@@ -67,7 +70,7 @@ const HomePage = () => {
       
       <div className="flex justify-around items-center">
         <div className="icon-circle">
-          <MdOutlineShoppingCart size={30} />
+          <MdOutlineShoppingCart size={29} />
         </div>
         <div className="icon-circle">
           <FaRegHeart size={27} />
@@ -89,6 +92,59 @@ const HomePage = () => {
       <img src={img4} alt="Hero Image Stacked Donuts" className='about-image mt-[-10rem] ml-[8rem]'/>
     </div>
   </div>
+
+  {/* Contact Section */}
+  <div className="contact-section">
+    <div className='w-[30rem] float-right mr-[19rem]'>
+    <h3 className="text-xl font-bold text-white mt-12 mb-12 ">A wide range of baked goodies, for the sweet lovers</h3>
+    <p className='text-white'>Explore our extensive menu filled with mouthwatering treats and savory delights. Explore our extensive menu filled with mouthwatering treats and savory delights. Explore our extensive menu filled with mouthwatering treats and savory delights.</p>
+    <button className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">Contact Us</button>
+    </div>
+
+    <div className='container w-[28rem] h-auto float-left rounded-lg ml-[17rem] p-8'>
+    <div className="flex flex-col items-center justify-center">
+     <div className="max-w-md mx-auto space-y-4 text-center">
+    <div className="flex items-center justify-between">
+      <div className="flex items-center">
+        <div className="icon-circle mr-4">
+          <IoStorefrontSharp size={30} />
+        </div>
+        <div>
+          <h3 className='font-bold text-lg mb-2 text-white'>In-Store Shopping</h3>
+          <p className="text-gray-300">Visit our bakery and explore our delicious range of freshly baked goods.</p>
+        </div>
+      </div>
+    </div>
+    <div className="flex items-center justify-between">
+      <div className="flex items-center">
+        <div className="icon-circle mr-4">
+          <TbTruckDelivery size={30} />
+        </div>
+        <div>
+          <h3 className='font-bold text-lg mb-2 mt-4 text-white'>Delivery</h3>
+          <p className="text-gray-300">Get your favorite treats delivered to your doorstep with our fast and reliable delivery service.</p>
+        </div>
+      </div>
+    </div>
+    <div className="flex items-center justify-between">
+      <div className="flex items-center">
+        <div className="icon-circle mr-4">
+          <FaHandHoldingUsd size={30} />
+        </div>
+        <div>
+          <h3 className='font-bold text-lg mb-2 mt-4 text-white'>Pre-Orders</h3>
+          <p className="text-gray-300">Place your order in advance and pick it up hassle-free at your preferred time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    </div>
+    </div>
   </>
   )
 }

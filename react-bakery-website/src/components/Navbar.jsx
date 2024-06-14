@@ -21,6 +21,7 @@ const Navbar = () => {
             <div className='hidden md:flex items-center gap-8 font-medium text-xl text-white'>
           <a href="/" className=' hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full'>Home</a>
           <a href="/about" className='hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full'>About Us</a>
+          <a href="/contact" className='hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full'>Contact Us</a>
           <a href="/menu" className='hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full'>Baked Menu</a>
           <button className="px-4 py-2 bg-secondary border-fourthColor text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">Baked Cart</button>
         </div>
