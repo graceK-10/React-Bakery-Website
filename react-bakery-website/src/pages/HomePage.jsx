@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../index.css";
@@ -10,12 +11,26 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { FaHandHoldingUsd } from "react-icons/fa";
 
 import img from "../assets/hero-img.png";
-import img2 from "../assets/home-menu-img-1.png";
+import img2 from "../assets/home-menu-img-1.jpeg";
 import img3 from "../assets/home-menu-img-2.jpeg";
 import img4 from "../assets/home-about-img-1.png";
-import img5 from "../assets/home-menu-img-3.png";
+import img5 from "../assets/home-menu-img-3.jpeg";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleMenuButtonClick = () => {
+    navigate("/menu");
+  };
+
+  const handleAboutButtonClick = () => {
+    navigate("/about");
+  };
+
+  const handleContactButtonClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <>
       <Navbar />
@@ -40,7 +55,10 @@ const HomePage = () => {
               Baked with <b>Love</b>, Enjoyed with <b>Passion</b>.
             </i>
           </p>
-          <button className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">
+          <button
+            className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg"
+            onClick={handleMenuButtonClick}
+          >
             Baked Menu
           </button>
           <img
@@ -68,16 +86,19 @@ const HomePage = () => {
             mouthwatering treats and savory delights. Explore our extensive menu
             filled with mouthwatering treats and savory delights.
           </p>
-          <button className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">
+          <button
+            className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg"
+            onClick={handleMenuButtonClick}
+          >
             Baked Menu
           </button>
         </div>
 
-        <div className="container mt-[16rem] ml-12 bg-gray-200 w-[18rem] h-auto rounded-lg shadow-md">
+        <div className="container border mt-[16rem] ml-12 bg-gray-200 w-[18rem] h-auto rounded-lg overflow-hidden shadow-md">
           <img
             src={img3}
             alt="Raspberry Rose Lychee Croissant"
-            className="w-[14rem] h-auto rounded-full mx-auto"
+            className="w-[12rem] h-auto mx-auto mt-6 rounded-t-lg"
           />
           <div className="p-4">
             <h4 className="font-bold text-lg mb-2 text-white">
@@ -98,11 +119,11 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="container mt-[-29rem] ml-[23rem] bg-gray-200 w-[18rem] h-auto rounded-lg overflow-hidden shadow-md">
+        <div className="container border mt-[-33rem] ml-[23rem] bg-gray-200 w-[18rem] h-auto rounded-lg overflow-hidden shadow-md">
           <img
             src={img5}
             alt="Hero Image Stacked Donuts"
-            className="w-[14rem] h-auto rounded-full mx-auto"
+            className="w-[12rem] h-auto mx-auto mt-6 rounded-t-lg"
           />
           <div className="p-4">
             <h4 className="font-bold text-lg mb-2 text-white">
@@ -124,11 +145,11 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="container mt-[-29rem] ml-[43rem] bg-gray-200 w-[18rem] h-auto rounded-lg overflow-hidden shadow-md">
+        <div className="container border mt-[-33rem] ml-[43rem] bg-gray-200 w-[18rem] h-auto rounded-lg overflow-hidden shadow-md">
           <img
             src={img2}
             alt="Hero Image Stacked Donuts"
-            className="w-[13rem] h-auto rounded-full mx-auto"
+            className="w-[11rem] h-auto mx-auto mt-6 rounded-t-lg"
           />
           <div className="p-4">
             <h4 className="font-bold text-lg mb-2 text-white">
@@ -169,7 +190,10 @@ const HomePage = () => {
             for baking and a commitment to excellence. Every recipe we create
             reflects our heritage and the values we hold dear.
           </p>
-          <button className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">
+          <button
+            className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg"
+            onClick={handleAboutButtonClick}
+          >
             About Us
           </button>
         </div>
@@ -194,7 +218,10 @@ const HomePage = () => {
             mouthwatering treats and savory delights. Explore our extensive menu
             filled with mouthwatering treats and savory delights.
           </p>
-          <button className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">
+          <button
+            className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg"
+            onClick={handleContactButtonClick}
+          >
             Contact Us
           </button>
         </div>

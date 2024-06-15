@@ -1,11 +1,31 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa6";
 
-import img3 from "../assets/home-menu-img-2.jpeg";
-import img5 from "../assets/download-2.jpeg";
+import img1 from "../assets/item-1.jpeg";
+import img2 from "../assets/item-2.jpeg";
+import img3 from "../assets/home-menu-img-1.jpeg";
+import img4 from "../assets/item-4.jpeg";
+import img5 from "../assets/home-menu-img-2.jpeg";
+import img6 from "../assets/item-6.jpeg";
+import img7 from "../assets/item-7.jpeg";
+import img8 from "../assets/item-8.jpeg";
+import img9 from "../assets/item-9.jpeg";
+import img10 from "../assets/item-10.jpeg";
+import img11 from "../assets/item-11.jpeg";
+import img12 from "../assets/item-12.jpeg";
+
+import img13 from "../assets/item-13.jpeg";
+import img14 from "../assets/item-14.jpeg";
+import img15 from "../assets/item-15.jpeg";
+import img16 from "../assets/item-16.jpeg";
+import img17 from "../assets/item-17.jpeg";
+import img18 from "../assets/home-menu-img-3.jpeg";
+import img19 from "../assets/item-19.jpeg";
+import img20 from "../assets/item-20.jpeg";
 
 const Menu = () => {
   const [menuItems] = useState([
@@ -14,14 +34,14 @@ const Menu = () => {
       title: "Raspberry Croissant",
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
-      img: img3,
+      img: img1,
     },
     {
       id: 2,
       title: "Raspberry Croissant",
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
-      img: img3,
+      img: img2,
     },
     {
       id: 3,
@@ -35,63 +55,119 @@ const Menu = () => {
       title: "Breakfast Croissant",
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
+      img: img4,
+    },
+    {
+      id: 5,
+      title: "Raspberry Croissant",
+      description:
+        "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img5,
     },
     {
-      id: 5,
-      title: "Raspberry Croissant",
-      description:
-        "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
-      img: img3,
-    },
-    {
       id: 6,
       title: "Raspberry Croissant",
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
-      img: img3,
+      img: img6,
     },
     {
-      id: 1,
+      id: 7,
       title: "Raspberry Croissant",
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
-      img: img3,
+      img: img7,
     },
     {
-      id: 2,
+      id: 8,
       title: "Raspberry Croissant",
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
-      img: img3,
+      img: img8,
     },
     {
-      id: 3,
+      id: 9,
       title: "Raspberry Croissant",
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
-      img: img3,
+      img: img9,
     },
     {
-      id: 4,
+      id: 10,
       title: "Raspberry Croissant",
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
-      img: img3,
+      img: img10,
     },
     {
-      id: 5,
+      id: 11,
       title: "Raspberry Croissant",
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
-      img: img3,
+      img: img11,
     },
     {
-      id: 6,
+      id: 12,
       title: "Raspberry Croissant",
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
-      img: img3,
+      img: img12,
+    },
+    {
+      id: 13,
+      title: "Raspberry Croissant",
+      description:
+        "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
+      img: img13,
+    },
+    {
+      id: 14,
+      title: "Raspberry Croissant",
+      description:
+        "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
+      img: img14,
+    },
+    {
+      id: 15,
+      title: "Raspberry Croissant",
+      description:
+        "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
+      img: img15,
+    },
+    {
+      id: 16,
+      title: "Raspberry Croissant",
+      description:
+        "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
+      img: img16,
+    },
+    {
+      id: 17,
+      title: "Raspberry Croissant",
+      description:
+        "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
+      img: img17,
+    },
+    {
+      id: 18,
+      title: "Raspberry Croissant",
+      description:
+        "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
+      img: img18,
+    },
+    {
+      id: 19,
+      title: "Raspberry Croissant",
+      description:
+        "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
+      img: img19,
+    },
+    {
+      id: 20,
+      title: "Raspberry Croissant",
+      description:
+        "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
+      img: img20,
     },
   ]);
 
@@ -135,6 +211,7 @@ const Menu = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
