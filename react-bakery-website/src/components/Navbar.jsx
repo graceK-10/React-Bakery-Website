@@ -50,7 +50,7 @@ const Navbar = () => {
 
         <div
           id="tabs"
-          className="hidden md:flex items-center gap-8 font-medium text-xl text-white"
+          className="hidden lg:flex items-center gap-8 font-medium text-xl text-white"
         >
           <a
             href="/"
@@ -91,7 +91,7 @@ const Navbar = () => {
         </div>
 
         {/* navbar open and close responsive icon */}
-        <div className="md:hidden pr-[5rem] sm:pr-[5rem] flex items-center">
+        <div className="lg:hidden pr-[5rem] sm:pr-[5rem] flex items-center">
           {menu ? (
             <FaEye size={25} onClick={handleClick} />
           ) : (
@@ -104,7 +104,7 @@ const Navbar = () => {
       <div
         className={`${
           menu ? "translate-x-0" : "-translate-x-full"
-        } md:hidden flex flex-col fixed bg-primary text-white left-0 top-25 w-full h-fit font-semibold text-2xl text-center pt-8 pb-4 gap-8 transition-transform duration-300 ease-in-out`}
+        } lg:hidden flex flex-col fixed bg-primary text-white left-0 top-25 w-full h-fit font-semibold text-2xl text-center pt-8 pb-4 gap-8 transition-transform duration-300 ease-in-out`}
       >
         <a
           href="/"
