@@ -11,7 +11,7 @@ import { FaHandHoldingUsd } from "react-icons/fa";
 
 import img from "../assets/hero-img.png";
 import img2 from "../assets/home-menu-img-1.png";
-import img3 from "../assets/home-menu-img-2.png";
+import img3 from "../assets/home-menu-img-2.jpeg";
 import img4 from "../assets/home-about-img-1.png";
 import img5 from "../assets/home-menu-img-3.png";
 
