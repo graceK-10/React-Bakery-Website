@@ -42,15 +42,23 @@ body{
   z-index: 1;
 } */
 
+.nav-link {
+  transition: all 0.3s ease-in-out;
+}
 
-  .hero-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 400px;
-    top: 6rem;
-    background: rgba(195, 177, 225, 0.5);
+.nav-link.active {
+  color: #5a09a1; 
+  border-bottom: 2px solid #5a09a1; 
+}
+
+.hero-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  top: 6rem;
+  background: rgba(195, 177, 225, 0.5);
   }
 
   /* .swirl-bg {
@@ -144,4 +152,22 @@ body{
 .about-image {
   width: 100%; /* Set the image width to fill the container */
   height: auto;
+}
+
+/* About Us Page */
+.mission-section {
+  display: flex;
+  justify-content: center; /* Center the flex items horizontally */
+  align-items: center;
+  width: 100%;
+}
+
+.text-container2 {
+  flex: 1;
+}
+
+.text-container2 {
+  padding-left: 2rem;
+  /* text-align: center; */
+  margin-right: 8rem;
 }
