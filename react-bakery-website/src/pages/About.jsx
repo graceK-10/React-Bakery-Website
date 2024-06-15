@@ -5,6 +5,7 @@ import "../index.css";
 
 import img from "../assets/hero-img-2.png";
 import img2 from "../assets/about-img-1.jpeg";
+import img3 from "../assets/about-img-2.jpeg";
 
 const About = () => {
   return (
@@ -108,20 +109,20 @@ const About = () => {
       <div className="mission-section">
         <div className="image-container">
           <img
-            src={img2}
+            src={img3}
             alt="Hero Image Stacked Donuts"
-            className="w-[20rem] h-auto mt-[10rem] ml-[18rem]"
+            className="w-[30rem] h-auto mt-[5rem] ml-[14rem]"
           />
         </div>
         <div className="text-container2 ml-[10rem]">
-          <h3 className="text-5xl font-bold text-white mt-[4rem] mb-12 text-outline-tertiary text-shadow">
+          <h3 className="text-5xl font-bold text-white mt-[4rem] text-outline-tertiary text-shadow">
             Our Mission
           </h3>
           <p className="text-white">
-            At Baked Bliss, our mission is to spread joy and create memorable
-            experiences through our exceptional baked goods. We believe in the
-            power of tradition, the importance of quality, and the happiness
-            that a simple treat can bring.
+            At Baked Bliss, our mission is to spread joy, create memorable
+            experiences and give back to our community through our exceptional
+            baked goods. We believe in the power of tradition, the importance of
+            unity, and the happiness that a simple treat can bring.
           </p>
           <p className="text-white mt-8">
             We are committed to using only the finest ingredients and
