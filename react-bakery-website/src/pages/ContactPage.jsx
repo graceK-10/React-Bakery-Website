@@ -4,6 +4,13 @@ import Navbar from "../components/Navbar";
 import img from "../assets/hero-img-3.png";
 
 const Contact = () => {
+  // A function to handle the form submission.
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    // Display an alert: Show the alert message in the submit handler.
+    alert("Thank you! We will get back to you within 24 hours.");
+  };
+
   return (
     <>
       <Navbar />
@@ -11,11 +18,15 @@ const Contact = () => {
       <div className="hero-section">
         <div className="swirl-bg"></div>
         <div className="content mx-[3rem] w-[50rem] text-center">
-          {/* <div className="max-w-md mx-auto mt-[8rem] relative overflow-hidden z-10 p-8 rounded-lg shadow-md before:w-24 before:h-24 before:absolute before:bg-purple-600 before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12 border-b-2 border-r-2"> */}
-          <div className="max-w-md mx-auto mt-[8rem] relative overflow-hidden z-10 p-8 rounded-lg before:w-24 before:h-24 before:absolute before:bg-purple-600 before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12 border-white border-b-1 border-r-2 shadow-white shadow-xl">
-            <h2 className="text-2xl font-bold text-white mb-6">Contact Us</h2>
+          <h1 className="text-5xl font-bold text-white/80 my-[3rem]  text-outline-tertiary text-shadow">
+            Contact Us
+          </h1>
+          <div className="max-w-md mx-auto mt-[2rem] relative overflow-hidden z-10 p-8 rounded-lg before:w-24 before:h-24 before:absolute before:bg-purple-600 before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12 border-white border-b-1 border-r-2 shadow-white shadow-xl">
+            <h3 className="text-xl text-white mb-8">
+              Feel free to send us any feedback you have
+            </h3>
 
-            <form method="post" action="#">
+            <form method="post" action="#" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
                   className="block text-sm font-medium text-white"
@@ -31,7 +42,7 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="mb-4">
+              <div className="mb-8">
                 <label
                   className="block text-sm font-medium text-white"
                   htmlFor="email"

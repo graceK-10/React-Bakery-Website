@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../index.css";
@@ -8,6 +9,12 @@ import img2 from "../assets/about-img-1.jpeg";
 import img3 from "../assets/about-img-2.jpeg";
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const handleMenuButtonClick = () => {
+    navigate("/menu");
+  };
+
   return (
     <>
       <Navbar />
@@ -41,7 +48,10 @@ const About = () => {
               Baked with <b>Love</b>, Enjoyed with <b>Passion</b>.
             </i>
           </p>
-          <button className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">
+          <button
+            className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg"
+            onClick={handleMenuButtonClick}
+          >
             Baked Menu
           </button>
           <img
