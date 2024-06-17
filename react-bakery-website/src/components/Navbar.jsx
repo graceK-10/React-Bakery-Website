@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { MdBakeryDining } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 import { RxEyeClosed } from "react-icons/rx";
@@ -32,6 +32,9 @@ const Navbar = () => {
       case "/menu":
         setActiveContentIndex(3);
         break;
+      case "/cart":
+        setActiveContentIndex(4);
+        break;
       default:
         setActiveContentIndex(0);
         break;
@@ -52,42 +55,47 @@ const Navbar = () => {
           id="tabs"
           className="hidden lg:flex items-center gap-8 font-medium text-xl text-white"
         >
-          <a
-            href="/"
+          <Link
+            to="/"
             className={`nav-link hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full 
                 ${activeContentIndex === 0 ? "active" : ""}`}
             onClick={() => handleNavClick(0)}
           >
             Home
-          </a>
+          </Link>
 
-          <a
-            href="/about"
+          <Link
+            to="/about"
             className={`nav-link hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full 
                 ${activeContentIndex === 1 ? "active" : ""}`}
             onClick={() => handleNavClick(1)}
           >
             About Us
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className={`nav-link hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full 
                 ${activeContentIndex === 2 ? "active" : ""}`}
             onClick={() => handleNavClick(2)}
           >
             Contact Us
-          </a>
-          <a
-            href="/menu"
+          </Link>
+          <Link
+            to="/menu"
             className={`nav-link hover:text-white hover:border-b-secondary border-r-secondary hover:btn-shadow px-5 py-1 rounded-full 
                 ${activeContentIndex === 3 ? "active" : ""}`}
             onClick={() => handleNavClick(3)}
           >
             Baked Menu
-          </a>
-          <button className="px-4 py-2 bg-secondary border-fourthColor text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">
+          </Link>
+          <Link
+            to="/cart"
+            className={`px-4 py-2 bg-secondary border-fourthColor text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg 
+                ${activeContentIndex === 4 ? "active" : ""}`}
+            onClick={() => handleNavClick(4)}
+          >
             Baked Cart
-          </button>
+          </Link>
         </div>
 
         {/* navbar open and close responsive icon */}
@@ -106,27 +114,33 @@ const Navbar = () => {
           menu ? "translate-x-0" : "-translate-x-full"
         } lg:hidden flex flex-col fixed bg-primary text-white left-0 top-25 w-full h-fit font-semibold text-2xl text-center pt-8 pb-4 gap-8 transition-transform duration-300 ease-in-out`}
       >
-        <a
-          href="/"
+        <Link
+          to="/"
           className="hover:text-secondary transition duration-200 ease-linear hover:border-b-2 hover:border-r-2 px-2 rounded-lg hover:border-secondary text-outline-tertiary"
         >
           Home
-        </a>
-        <a
-          href="/"
+        </Link>
+        <Link
+          to="/about"
           className="hover:text-secondary transition duration-200 ease-linear hover:border-b-2 hover:border-r-2 px-2 rounded-lg hover:border-secondary text-outline-tertiary"
         >
           About Us
-        </a>
-        <a
-          href="/"
+        </Link>
+        <Link
+          to="/menu"
           className="hover:text-secondary transition duration-200 ease-linear hover:border-b-2 hover:border-r-2 px-2 rounded-lg hover:border-secondary text-outline-tertiary"
         >
           Baked Menu
-        </a>
-        <button className="hidden md:flex border-2 border-secondary text-base px-3 py-0.5 rounded-2xl hover:bg-primary hover:text-white hover:border-primary transition duration-100 ease-linear">
+        </Link>
+        <Link
+          to="/cart"
+          className="hover:text-secondary transition duration-200 ease-linear hover:border-b-2 hover:border-r-2 px-2 rounded-lg hover:border-secondary text-outline-tertiary"
+        >
           Baked Cart
-        </button>
+        </Link>
+        {/* <button className="px-4 py-2 bg-secondary border-fourthColor text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">
+        Baked Cart
+      </button> */}
       </div>
     </header>
   );

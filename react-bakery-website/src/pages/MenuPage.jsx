@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa6";
 
+import { useCart } from "../CartContext";
+
 import img1 from "../assets/item-1.jpeg";
 import img2 from "../assets/item-2.jpeg";
 import img3 from "../assets/home-menu-img-1.jpeg";
@@ -34,6 +36,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img1,
+      price: 5.99,
     },
     {
       id: 2,
@@ -41,6 +44,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img2,
+      price: 5.99,
     },
     {
       id: 3,
@@ -48,6 +52,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img3,
+      price: 5.99,
     },
     {
       id: 4,
@@ -55,6 +60,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img4,
+      price: 5.99,
     },
     {
       id: 5,
@@ -62,6 +68,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img5,
+      price: 5.99,
     },
     {
       id: 6,
@@ -69,6 +76,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img6,
+      price: 5.99,
     },
     {
       id: 7,
@@ -76,6 +84,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img7,
+      price: 5.99,
     },
     {
       id: 8,
@@ -83,6 +92,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img8,
+      price: 5.99,
     },
     {
       id: 9,
@@ -90,6 +100,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img9,
+      price: 5.99,
     },
     {
       id: 10,
@@ -97,6 +108,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img10,
+      price: 5.99,
     },
     {
       id: 11,
@@ -104,6 +116,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img11,
+      price: 5.99,
     },
     {
       id: 12,
@@ -111,6 +124,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img12,
+      price: 5.99,
     },
     {
       id: 13,
@@ -118,6 +132,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img13,
+      price: 5.99,
     },
     {
       id: 14,
@@ -125,6 +140,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img14,
+      price: 5.99,
     },
     {
       id: 15,
@@ -132,6 +148,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img15,
+      price: 5.99,
     },
     {
       id: 16,
@@ -139,6 +156,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img16,
+      price: 5.99,
     },
     {
       id: 17,
@@ -146,6 +164,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img17,
+      price: 5.99,
     },
     {
       id: 18,
@@ -153,6 +172,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img18,
+      price: 5.99,
     },
     {
       id: 19,
@@ -160,6 +180,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img19,
+      price: 5.99,
     },
     {
       id: 20,
@@ -167,6 +188,7 @@ const Menu = () => {
       description:
         "Made with the finest ingredients and filled with the goodness of raspberry and rose, its a treat you wont forget.",
       img: img20,
+      price: 5.99,
     },
   ];
 
@@ -174,6 +196,8 @@ const Menu = () => {
   const [menuInput, setMenuInput] = useState("");
   // Holds the list of products filtered based on the search query.
   const [filteredItems, setFilteredItems] = useState(items);
+
+  const { addItemToCart } = useCart();
 
   // handleMenuInputChange function updates the menuInput state and calls filterProducts with the new search query.
   const handleMenuInputChange = (event) => {
@@ -231,8 +255,14 @@ const Menu = () => {
                 {item.title}
               </h2>
               <p className="text-white mt-2">{item.description}</p>
+              <p className="text-white mx-2 my-8 text-lg float-right">
+                R{item.price}{" "}
+              </p>
               <div className="flex justify-around items-center mt-6">
-                <div className="icon-circle">
+                <div
+                  className="icon-circle"
+                  onClick={() => addItemToCart(item)}
+                >
                   <MdOutlineShoppingCart size={27} />
                 </div>
                 <div className="icon-circle">
