@@ -1,7 +1,6 @@
 import React from "react";
 import { useCart } from "../CartContext";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const Cart = () => {
   const {
@@ -61,7 +60,7 @@ const Cart = () => {
               </div>
             ))}
           </div>
-          <div className="flex-2 lg:w-1/3 p-4 bg-gray-800 text-white rounded-lg shadow-lg mt-8 lg:mt-0">
+          <div className="flex-2 lg:w-1/3 p-4 bg-gray-800 text-white rounded-lg shadow-lg mt-8 lg:mt-0 max-h-[490px] overflow-y-auto">
             <h2 className="text-3xl font-bold">Order Summary</h2>
             <ul className="mt-4">
               {cart.map((item) => (
@@ -81,7 +80,6 @@ const Cart = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

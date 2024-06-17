@@ -4,11 +4,13 @@ import { MdBakeryDining } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 import { RxEyeClosed } from "react-icons/rx";
 import "../index.css";
+import { useCart } from "../CartContext";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [activeContentIndex, setActiveContentIndex] = useState(0);
   const location = useLocation();
+  const { cartCount } = useCart();
 
   const handleClick = () => {
     setMenu(!menu);
@@ -91,10 +93,15 @@ const Navbar = () => {
           <Link
             to="/cart"
             className={`px-4 py-2 bg-secondary border-fourthColor text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg 
-                ${activeContentIndex === 4 ? "active" : ""}`}
+            ${activeContentIndex === 4 ? "active" : ""}`}
             onClick={() => handleNavClick(4)}
           >
             Baked Cart
+            {cartCount > 0 && (
+              <span className="ml-2 bg-fourthColor text-white rounded-full px-2 py-1 text-sm">
+                {cartCount}
+              </span>
+            )}
           </Link>
         </div>
 
@@ -137,10 +144,12 @@ const Navbar = () => {
           className="hover:text-secondary transition duration-200 ease-linear hover:border-b-2 hover:border-r-2 px-2 rounded-lg hover:border-secondary text-outline-tertiary"
         >
           Baked Cart
+          {cartCount > 0 && (
+            <span className="ml-2 bg-fourthColor text-white rounded-full px-2 py-1 text-sm">
+              {cartCount}
+            </span>
+          )}
         </Link>
-        {/* <button className="px-4 py-2 bg-secondary border-fourthColor text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg">
-        Baked Cart
-      </button> */}
       </div>
     </header>
   );

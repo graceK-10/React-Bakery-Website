@@ -4,10 +4,11 @@ import React, { createContext, useState, useContext } from "react";
 
 const CartContext = createContext();
 
-export const useCart = () => useContext(CartContext);
+// export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
 
   const addItemToCart = (item) => {
     setCart((prevCart) => {
@@ -21,6 +22,7 @@ export const CartProvider = ({ children }) => {
       }
       return [...prevCart, { ...item, quantity: 1 }];
     });
+    setCartCount(cartCount + 1);
   };
 
   const increaseItemQuantity = (itemId) => {
@@ -53,9 +55,12 @@ export const CartProvider = ({ children }) => {
         increaseItemQuantity,
         decreaseItemQuantity,
         removeItemFromCart,
+        cartCount,
       }}
     >
       {children}
     </CartContext.Provider>
   );
 };
+
+export const useCart = () => useContext(CartContext);
