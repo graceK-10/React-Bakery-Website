@@ -11,6 +11,7 @@ export default {
         secondary: "#957DAD",
         tertiary: "#3C1361",
         fourthColor: "#52307C",
+        bgColor: "#c3b1e180",
       },
       container: {
         center: true,

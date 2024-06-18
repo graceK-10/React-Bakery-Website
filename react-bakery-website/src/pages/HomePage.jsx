@@ -39,7 +39,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <div className="hero-section">
         <div className="swirl-bg"></div>
-        <div className="content mx-[3rem] w-[37rem] text-center">
+        <div className="content mx-[3rem] w-[37rem] text-center md:mx-auto md:w-[37rem]">
           <h1 className="text-5xl font-bold text-white/80 mt-[3rem] mb-12 text-outline-tertiary text-shadow">
             Welcome to Baked Bliss!
           </h1>

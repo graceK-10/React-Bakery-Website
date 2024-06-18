@@ -58,9 +58,11 @@ body{
   align-items: center;
   min-height: 400px;
   top: 6rem;
-  background: rgba(195, 177, 225, 0.5);
+  background: #c3b1e180;
+  /* width: 100%; */
   }
 
+  
   /* .swirl-bg {
     position: absolute;
     height: 150px;

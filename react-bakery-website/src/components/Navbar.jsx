@@ -119,7 +119,7 @@ const Navbar = () => {
       <div
         className={`${
           menu ? "translate-x-0" : "-translate-x-full"
-        } lg:hidden flex flex-col fixed bg-primary text-white left-0 top-25 w-full h-fit font-semibold text-2xl text-center pt-8 pb-4 gap-8 transition-transform duration-300 ease-in-out`}
+        } lg:hidden flex flex-col fixed bg-secondary text-white left-0 top-20 w-full h-fit font-semibold text-2xl text-center pt-8 pb-4 gap-8 transition-transform duration-300 ease-in-out`}
       >
         <Link
           to="/"
