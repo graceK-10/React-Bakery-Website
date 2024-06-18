@@ -2,16 +2,18 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+// import ScrollAnimation from "react-animate-on-scroll";
 import "../index.css";
 
-import { MdOutlineShoppingCart } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa6";
+// import { MdOutlineShoppingCart } from "react-icons/md";
+// import { FaRegHeart } from "react-icons/fa6";
 import { IoStorefrontSharp } from "react-icons/io5";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FaHandHoldingUsd } from "react-icons/fa";
+import "animate.css/animate.compat.css";
 
 import img from "../assets/hero-img.png";
-import img2 from "../assets/home-menu-img-1.jpeg";
+import img2 from "../assets/item-1.jpeg";
 import img3 from "../assets/home-menu-img-2.jpeg";
 import img4 from "../assets/home-about-img-1.png";
 import img5 from "../assets/home-menu-img-3.jpeg";
@@ -50,7 +52,13 @@ const HomePage = () => {
           <p className="text-xl text-white mt-8">
             Savor the warmth and flavor of our freshly baked treats, and let us
             make your day a little brighter, one delicious bite at a time.{" "}
-            <br />
+          </p>
+          <p className="text-xl text-white mt-8">
+            Whether you are in the mood for a classic favorite or looking to try
+            something new, our bakery offers a wide variety of goodies that
+            promise to delight your taste buds and bring joy to your heart.
+          </p>
+          <p className="text-xl text-white mt-8">
             <i>
               Baked with <b>Love</b>, Enjoyed with <b>Passion</b>.
             </i>
@@ -64,20 +72,20 @@ const HomePage = () => {
           <img
             src={img}
             alt="Hero Image Stacked Donuts"
-            className="w-[20rem] h-auto ml-[42rem] mt-[-27rem]"
+            className="w-[21rem] h-auto ml-[42rem] mt-[-35rem]"
           />
           <img
             src={img}
             alt="Hero Image Stacked Donuts"
-            className="w-[16rem] h-auto ml-[-22rem] mt-[-34rem]"
+            className="w-[20rem] h-auto ml-[-24rem] mt-[-34rem]"
           />
         </div>
       </div>
 
       {/* Menu Section */}
-      <div className="menu-section mt-[8rem]">
+      <div className="menu-section mt-[3rem]">
         <div className="w-[30rem] float-right  mr-[4rem]">
-          <h3 className="text-xl font-bold text-white mb-12 ">
+          <h3 className="text-xl font-bold text-white mb-8 mt-[-6rem]">
             A wide range of baked goodies, for the sweet lovers
           </h3>
           <p className="text-white">
@@ -85,6 +93,18 @@ const HomePage = () => {
             savory delights. Explore our extensive menu filled with
             mouthwatering treats and savory delights. Explore our extensive menu
             filled with mouthwatering treats and savory delights.
+          </p>
+          <p className="text-white mt-8">
+            Our menu features a variety of options to satisfy every craving,
+            whether you are in the mood for a sweet indulgence or a savory
+            snack. Each bite is a testament to our commitment to quality and
+            taste, promising an unforgettable experience with every visit.
+          </p>
+          <p className="text-white mt-8">
+            From morning pastries to afternoon desserts, and everything in
+            between, our selection is designed to delight your senses and make
+            every moment special. Come in and discover your new favorite treat
+            today!
           </p>
           <button
             className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg"
@@ -94,6 +114,7 @@ const HomePage = () => {
           </button>
         </div>
 
+        {/* <ScrollAnimation animateIn="fadeIn"> */}
         <div className="container border mt-[16rem] ml-12 bg-gray-200 w-[18rem] h-auto rounded-lg overflow-hidden shadow-md">
           <img
             src={img3}
@@ -105,20 +126,14 @@ const HomePage = () => {
               Raspberry Croissant
             </h4>
             <p className="text-white text-sm mb-4">
-              Made with the finest ingredients and filled with the goodness of
-              raspberry and rose, its a treat you wont forget.
+              This Raspberry Rose Lychee Croissant is filled with raspberry rose
+              compote, a lychee glaze and freeze-dried raspberries.
             </p>
-            <div className="flex justify-around items-center">
-              <div className="icon-circle">
-                <MdOutlineShoppingCart size={29} />
-              </div>
-              <div className="icon-circle">
-                <FaRegHeart size={27} />
-              </div>
-            </div>
           </div>
         </div>
+        {/* </ScrollAnimation> */}
 
+        {/* <ScrollAnimation animateIn="fadeIn"> */}
         <div className="container border mt-[-33rem] ml-[23rem] bg-gray-200 w-[18rem] h-auto rounded-lg overflow-hidden shadow-md">
           <img
             src={img5}
@@ -130,46 +145,31 @@ const HomePage = () => {
               Breakfast Croissant
             </h4>
             <p className="text-white text-sm mb-4">
-              Delicately crafted with layers of thin crepes and filled with rich
-              Nutella, its a delightful dessert you wll love to indulge in.
+              These Maple-Dijon Breakfast Croissant Sandwiches are filled with
+              cheese, fried bacon, a fried egg and a 2 fried sausages.
             </p>
-
-            <div className="flex justify-around items-center">
-              <div className="icon-circle">
-                <MdOutlineShoppingCart size={29} />
-              </div>
-              <div className="icon-circle">
-                <FaRegHeart size={27} />
-              </div>
-            </div>
           </div>
         </div>
+        {/* </ScrollAnimation> */}
 
+        {/* <ScrollAnimation animateIn="fadeIn"> */}
         <div className="container border mt-[-33rem] ml-[43rem] bg-gray-200 w-[18rem] h-auto rounded-lg overflow-hidden shadow-md">
           <img
             src={img2}
             alt="Hero Image Stacked Donuts"
-            className="w-[11rem] h-auto mx-auto mt-6 rounded-t-lg"
+            className="w-[12rem] h-[17rem] mx-auto mt-6 rounded-t-lg"
           />
           <div className="p-4">
             <h4 className="font-bold text-lg mb-2 text-white">
-              Nutella French Crepes
+              Red Velvet Waffles
             </h4>
             <p className="text-white text-sm mb-4">
-              Delicately crafted with layers of thin crepes and filled with rich
-              Nutella, its a delightful dessert you wll love to indulge in.
+              Delight in the art of breakfast with our Red Velvet Marble
+              Waffles, a perfect blend of classic and red velvet batter.
             </p>
-
-            <div className="flex justify-around items-center">
-              <div className="icon-circle">
-                <MdOutlineShoppingCart size={29} />
-              </div>
-              <div className="icon-circle">
-                <FaRegHeart size={27} />
-              </div>
-            </div>
           </div>
         </div>
+        {/* </ScrollAnimation> */}
       </div>
 
       {/* About Section */}
@@ -209,14 +209,19 @@ const HomePage = () => {
       {/* Contact Section */}
       <div className="contact-section">
         <div className="w-[30rem] float-right mr-[19rem]">
-          <h3 className="text-xl font-bold text-white mt-12 mb-12 ">
-            A wide range of baked goodies, for the sweet lovers
+          <h3 className="text-xl font-bold text-white mt-4 mb-12 ">
+            Get in Touch with Us
           </h3>
           <p className="text-white">
-            Explore our extensive menu filled with mouthwatering treats and
-            savory delights. Explore our extensive menu filled with
-            mouthwatering treats and savory delights. Explore our extensive menu
-            filled with mouthwatering treats and savory delights.
+            We would love to hear from you! Whether you have questions about our
+            menu, need assistance with an order, or just want to share your
+            feedback, our team is here to help. Reach out to us and let us make
+            your experience with Baked Bliss even more delightful.
+          </p>
+          <p className="text-white mt-8">
+            You can contact us via phone, email, or visit our store. We are
+            dedicated to providing you with the best service and ensuring that
+            all your needs are met. Your satisfaction is our priority.
           </p>
           <button
             className="px-4 py-2 mt-10 bg-secondary text-white rounded-full hover:bg-tertiary btn-shadow transition duration-200 ease-linear text-lg"

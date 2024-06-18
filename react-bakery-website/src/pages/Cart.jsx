@@ -32,28 +32,27 @@ const Cart = () => {
                   alt={item.title}
                   className="w-full h-48 object-cover rounded-t-lg"
                 />
-                <h2 className="text-xl text-white font-semibold mt-4">
+                <h2 className="text-lg text-white font-semibold mt-4">
                   {item.title}
                 </h2>
-                <p className="text-white mt-2">{item.description}</p>
-                <div className="flex justify-between items-center mt-6">
+                <div className="flex justify-around items-center mt-6">
                   <button
                     onClick={() => decreaseItemQuantity(item.id)}
-                    className="btn font-bold text-white text-3xl mx-4 hover:text-primary"
+                    className="btn font-bold text-white text-3xl hover:text-primary"
                   >
                     -
                   </button>
                   <span className="text-white">{item.quantity}</span>
                   <button
                     onClick={() => increaseItemQuantity(item.id)}
-                    className="btn font-bold text-white text-2xl mx-4 hover:text-primary"
+                    className="btn font-bold text-white text-2xl hover:text-primary"
                   >
                     +
                   </button>
                 </div>
                 <button
                   onClick={() => removeItemFromCart(item.id)}
-                  className="btn mt-4 mx-3 text-white border-b hover:border-b-primary hover:text-primary"
+                  className="btn mt-4 text-white border-b hover:border-b-primary hover:text-primary"
                 >
                   Remove
                 </button>
